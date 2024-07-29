@@ -22,10 +22,15 @@ class SimpleBot(Bot):
         # calculate the angle to the target
         angle = target.as_polar()[1]
 
-        # calculate the throttle and steering
-        if abs(angle) < 0.1:
-            return 1, 0
-        if angle > 0:
-            return 0.1, 1
+        # calculate the throttle
+        target_velocity = 50
+        if velocity.length() < target_velocity:
+            throttle = 1
         else:
-            return 0.1, -1
+            throttle = -1
+
+        # calculate the steering
+        if angle > 0:
+            return throttle, 1
+        else:
+            return throttle, -1
