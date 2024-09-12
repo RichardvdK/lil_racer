@@ -1,1 +1,1 @@
-Bot template for https://github.com/Rayman/coding-challenge-racer
+Bot template for https://github.com/nobleans-playground/coding-challenge-racer
