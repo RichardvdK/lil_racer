@@ -25,7 +25,7 @@ class LilRacer(Bot):
 
     @property
     def contributor(self):
-        return "Nobleo"
+        return "Richard"
 
     def compute_commands(self, next_waypoint: int, position: Transform, velocity: Vector2) -> Tuple:
         target = self.track.lines[next_waypoint]
