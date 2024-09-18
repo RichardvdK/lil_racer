@@ -6,10 +6,22 @@ from ...bot import Bot
 from ...linear_math import Transform
 
 
-class SimpleBot(Bot):
+class LilRacer(Bot):
+    def __init__(self, track):
+        super().__init__(track)
+        self.color = (255, 0, 0)
+
+    @property
+    def color(self):
+        return self._color
+
+    @color.setter
+    def color(self, value):
+        self._color = value
+
     @property
     def name(self):
-        return "SimpleBot"
+        return "LilRacer"
 
     @property
     def contributor(self):

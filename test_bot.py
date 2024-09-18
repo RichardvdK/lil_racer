@@ -1,5 +1,6 @@
-from .bot import SimpleBot
+from .bot import LilRacer
 
 
 def test_init():
-    SimpleBot(track=None)
+    LilRacer(track=None)
+
